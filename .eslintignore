@@ -4,3 +4,6 @@ commitlint.config.js
 commit-types.config.js
 release.config.js
 changelog.config.js
+esm
+lib
+examples
