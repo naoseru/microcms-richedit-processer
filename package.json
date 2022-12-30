@@ -36,7 +36,6 @@
     "lint": "eslint . --cache",
     "commitmsg": "commitlint -e $GIT_PARAMS",
     "lint-staged": "lint-staged",
-    "prepare": "husky install",
     "semantic-release": "SKIP_BY_SEMANTIC_RELEASE=true semantic-release",
     "test": "jest",
     "test:watch": "jest --watch"
