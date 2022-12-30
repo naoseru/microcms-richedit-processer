@@ -27,7 +27,11 @@ const imgProcesser = async (
 
   const splitSrc = getSrcAttr().split('?')
 
-  const size = sizeOf(await fetch(splitSrc[0]).then((res) => res.buffer()))
+  const size = sizeOf(
+    await fetch(splitSrc[0])
+      .then((res) => res.arrayBuffer())
+      .then((arrayBuffer) => Buffer.from(arrayBuffer))
+  )
   const imgixParams = Object.assign(
     {},
     new URLSearchParams(splitSrc[1]),
